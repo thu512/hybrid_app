@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+
+ <script type="text/javascript">
+ $(function(){
+	 $('#btn').click(function(){
+		 $.get('a.jsp',{name : $('#name').val()},
+				 function(data){
+			 $('#message').html(data);
+			 
+		 });
+	   });
+	});
+    
+</script>
+<body>
+
+<?php
+
+ ?>
+
+ 이름 : <input type="text" id="name" size="12" maxlength="3">
+  <input type="button" value="테스트" id ="btn">
+  <div id = "message"> </div>
+ 
+</body>
+</html>

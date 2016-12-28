@@ -1,0 +1,201 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jquerytest2</title>
+ <mata name="viewport" content="width=device-width,initial-scale=1">
+ <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css"/>
+  <link rel="stylesheet" type="text/css" href="universe.css">
+ <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+ <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.js"></script>
+</mata>
+<script>
+
+
+var seats=[];
+
+
+	$(function(){
+        $(document).ready(function(){
+            	
+                $.ajax({
+                    url : "http://220.121.135.222:8080/realtime/json.jsp",
+                    dataType : "jsonp",
+                    jsonp : "callback",
+		                crossDomain:true,
+		                async: true,
+                    success : function(d){
+		    
+                        $.each(d, function(k, v){
+			                      showSeatColor(k,v);
+                           
+                        });
+                        $("#ajax").show();
+                    }
+                });
+            
+        })
+});
+
+
+
+var d = new Date();
+var time= d.getHours()+"시 "+d.getMinutes()+"분 "+d.getSeconds()+"초";
+
+
+    </script>
+</head>
+
+<body>
+ <div data-role="page" data-theme="b">
+  <div data-role="header" data-fullscreen="true" data-theme="b">
+     <a href="syulist.html" data-icon="back" data-direction="reverse">back</a>
+	 <a href="list.html" data-icon="home" data-iconpos="notext">홈</a>
+	<h1>좌석보기</h1>
+ </div>
+ <div id="ajax" data-role="content">
+ <div>
+        <center><label for="time">현재 시간</label>
+        <script>document.write(time);</script></center>
+        </br>
+    </div>
+<table align="center" border="1" style="width: 100%; height: 100%;">
+  
+  <tr>
+  <td id="1" colspan='2' rowspan='5' width="10%" align="center">6석</td>
+  <td width="5%" style=border:0px  rowspan='11'></td>
+  <td  colspan='8' rowspan='6' align="center" width="30%">카운터</td>
+  <td  width="5%" style=border:0px rowspan='11'></td>
+  <td id="5" colspan='2' rowspan='2' width="8%" align="center">2석</td>
+  <td width="5%" style=border:0px rowspan='11'></td>
+  <td id="6" width="12%" colspan='2' rowspan='2' align="center">&nbsp;</br>4석</br>&nbsp;</td>
+  <td width="5%" style=border:0px rowspan='11'></td>
+  <td id="8" width="12%" colspan='2' rowspan='2' align="center" >4석</td>
+  <td width="5%" style=border:0px rowspan='11'></td>  
+  <td width="5%" style=border:0px></td>
+  </tr>
+  
+  <tr>
+  <td  style=border:0px></td>
+  </tr>
+
+  
+  <tr>
+  <td  style=border:0px colspan='2' rowspan='2'></td> 
+  <td  style=border:0px colspan='2' rowspan='2'></td> 
+  <td  style=border:0px colspan='2' rowspan='2'></td>
+  <td id="11" align="center">1석</td>
+  </tr>
+  
+  
+  <tr>  
+  <td  style=border:0px ></br>&nbsp;</td>
+  </tr>
+  
+  
+  <tr>
+  <td  style=border:0px></td>
+  <td  style=border:0px></td>
+  <td id="7" colspan='2' rowspan='2' align="center">4석</td>
+  <td id="9" colspan='2' rowspan='2' align="center">4석</td>  
+  <td id="12" align="center">1석</td>
+  </tr>
+  
+  
+  <tr>
+  <td  style=border:0px></td>
+  <td  style=border:0px></td>
+  <td  style=border:0px></td>
+  <td  style=border:0px></td>
+  <td  style=border:0px ></br>&nbsp;</td>
+  </tr>
+  
+  
+  
+  <tr>
+  <td  style=border:0px></br>&nbsp;</br>&nbsp;</td>
+  <td  style=border:0px></td> 
+  <td  style=border:0px colspan='8' rowspan='3'></br>&nbsp;</td>
+  <td  style=border:0px colspan='2' rowspan='3'></br>&nbsp;</td> 
+  <td  style=border:0px colspan='2' rowspan='3'></br>&nbsp;</td>
+  <td  style=border:0px colspan='2' rowspan='3'></td>
+  <td style=border:0px></td>
+  </tr>
+  
+  
+  
+  <tr>
+  <td id="2" colspan='2' rowspan='4' align="center">4석</td>
+  <td  style=border:0px></td> 
+  </tr>
+  
+  
+  
+  <tr>  
+  <td id="13" align="center">1석</td>
+  </tr>
+  
+  
+  
+  <tr>  
+  <td  style=border:0px colspan='5' rowspan='2'></td> 
+  <td id="3" width="10%" colspan='2' rowspan='2' align="center">4석</td>  
+  <td id="4" width="10%" colspan='2' rowspan='2' align="center">4석</td>
+  <td  style=border:0px colspan='2' rowspan='2'></td>
+  <td  style=border:0px colspan='2' rowspan='2'></td>
+  <td id="10" colspan='2' rowspan='2' align="center">4석</td>
+  <td  style=border:0px></br>&nbsp;</td> 
+  </tr>
+  
+  
+  
+  
+  
+  <tr>
+  <td id="14" align="center">1석</td>
+  </tr>
+  
+  
+  
+  <tr>
+  <td  style=border:0px colspan='1'></td>
+  <td align="center" colspan='6'>화장실</td>
+  <td  style=border:0px colspan='6'></td>
+  <td align="center" colspan='5'>출입문</td>
+  <td  style=border:0px colspan='5'></td>
+  </tr>
+  
+  </table>
+ </div>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+	 <div data-role="navbar" data-theme="b">
+	  <ul>
+	   <li><a href="info.html" class="ui-btn-active" data-icon="gear">카페소개</a></li> 
+	   <li><a href="view.html" class="ui-btn-active" data-icon="grid" target="_parent">좌석보기</a></li>
+   	   <li><a href="price.html" class="ui-btn-active" data-icon="search">가격표</a></li>
+   	   <li><a href="road.html" class="ui-btn-active" data-icon="info">길찾기</a></li>	  
+	  </ul> 
+	 </div>
+	</div>
+</div>
+</body>
+
+
+<script>
+
+
+function showSeatColor(seatNo,value) { 
+
+  var seatld = document.getElementById(seatNo); 
+  if(value==1){ 
+    seatld.style.backgroundColor = 'white'; 
+  }
+  else{ 
+
+    seatld.style.backgroundColor = 'gray'; 
+  }
+} 
+
+</script>
+
+</html>

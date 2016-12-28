@@ -1,0 +1,68 @@
+  	#syulogo{
+	width:204px;
+	height:133px;
+	text-indent:-9999px;
+	background-image:url(syuimage.png);
+	background-repeat:no-repeat;
+	margin-top:auto;
+	margin-right:auto;
+	margin-bottom:auto;
+	margin-left:auto;
+}
+  	#syustreet{
+	width:315px;
+	height:187px;
+	text-indent:-9999px;
+	background-image:url(streetcafe.png);
+	background-repeat:no-repeat;
+	margin-top:auto;
+	margin-right:auto;
+	margin-bottom:auto;
+	margin-left:auto;
+}
+  	#syumap{
+	width:284px;
+	height:354px;
+	text-indent:-9999px;
+	background-image:url(syumap.png);
+	background-repeat:no-repeat;
+	margin-top:auto;
+	margin-right:auto;
+	margin-bottom:auto;
+	margin-left:auto;
+}
+
+  	#logo1{
+	width:300px;
+	height:300px;
+	text-indent:-9999px;
+	background-image:url(logo.png);
+	background-repeat:no-repeat;
+	margin-top:auto;
+	margin-right:auto;
+	margin-bottom:auto;
+	margin-left:auto;
+}
+    #logo2{
+	width:256px;
+	height:257px;
+	text-indent:-9999px;
+	background-image:url(logo2.png);
+	background-repeat:no-repeat;
+	margin-top:auto;
+	margin-right:auto;
+	margin-bottom:auto;
+	margin-left:auto;
+}
+
+  	#streetmenu{
+	width:269px;
+	height:405px;
+	text-indent:-9999px;
+	background-image:url(streetmenu.png);
+	background-repeat:no-repeat;
+	margin-top:auto;
+	margin-right:auto;
+	margin-bottom:auto;
+	margin-left:auto;
+}
